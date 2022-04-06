@@ -23,15 +23,15 @@ const middle = function(array) {
   if (array.length <= 2) return [];
 
   // for arrays with odd number of elements, an array with a single middle element should be returned
-  let middle = array.length / 2;
+  let middleElms = [];
   if (array.length % 2 === 1) {
-    return array[Math.floor(middle)];
+    middleElms.push(array[Math.floor(array.length / 2)]);
+    return middleElms;
   // for arrays with an even number of elements, an array with the two elements in the middle should be returned
   } else {
-    return [
-      array[middle - 1],
-      array[middle],
-    ];
+    middleElms.push(array[middle - 1]);
+    middleElms.push(array[middle]);
+    return middleElms;
   }
 };
 
