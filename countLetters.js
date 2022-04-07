@@ -13,7 +13,7 @@ const countLetters = function(sentence) {
   let letterCount = {};
 
   for (const char of sentence) {
-    if (char !== ' ') {
+    if (!char.match(new RegExp(/[^a-zA-Z]+/g))) {
       letterCount[char] = (isNaN(letterCount[char]) ? 1 : letterCount[char] + 1);
     }
   }
@@ -21,18 +21,17 @@ const countLetters = function(sentence) {
 };
 
 // test cases
-console.log(countLetters("LHL")); // { L: 2, H: 1};
-console.log(countLetters("banana"));
-console.log(countLetters("lighthouse in the house")); 
-// {
-//   l: 1,
-//   i: 2,
-//   g: 1,
-//   h: 4,
-//   t: 2,
-//   o: 2,
-//   u: 2,
-//   s: 2,
-//   e: 3,
-//   n: 1,
-// }
+//console.log(countLetters("Hi, my name is Amy!!"));
+
+const str1 = countLetters("LHL"); // { L: 2, H: 1};
+assertEqual(str1["L"], 2);
+assertEqual(str1["H"], 1); 
+
+const str2 = countLetters("lighthouse in the house"); // { l: 1, i: 2, g: 1, h: 4, t: 2, o: 2, u: 2, s: 2, e: 3, n: 1,}
+assertEqual(str2["h"], 4); 
+assertEqual(str2[" "], 3); 
+
+const str3 = countLetters("Hi, my name is Amy!!!!");
+assertEqual(str3["!"], 1); 
+assertEqual(str3[","], 1); 
+assertEqual(str2[" "], 4); 
