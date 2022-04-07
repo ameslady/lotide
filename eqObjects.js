@@ -36,25 +36,33 @@ const eqObjects = function(obj1, obj2) {
       } else if (val1 !== val2) {
         return false;
       }
+    } else if (obj1[key] !== obj2[key]) {
+      return false;
     }
   }
   return true;
 };
 
-// test case: step 2
+// test cases
+// objs w/ primitve values that match
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 assertEqual(eqObjects(ab, ba), true); // => true
 
+// objs w/ primitve values that don't match
+const fe = { c: "1", d: "3" };
+const gh = { c: "2", d: "4" };
+assertEqual(eqObjects(fe, gh), false); // => false
+
+// 
 const abc = { a: "1", b: "2", c: "3" };
 assertEqual(eqObjects(ab, abc), false); // => false
 
-// //console.log(eqObjects(ab, ba));
-
-// test case: step 3
+// objs that contain arrays that match
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 assertEqual(eqObjects(cd, dc), true); // => true
 
+// objs that contain arrays that don't match
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertEqual(eqObjects(cd, cd2), false); // => false
