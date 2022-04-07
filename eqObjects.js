@@ -18,6 +18,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+// compares object data
 const eqObjects = function(obj1, obj2) {
   let objKeys1 = Object.keys(obj1);
   let objKeys2 = Object.keys(obj2);
@@ -33,12 +34,11 @@ const eqObjects = function(obj1, obj2) {
       if (eqArrays(val1, val2)) {
         continue;
       } else if (val1 !== val2) {
-  
         return false;
-      }  
-    } 
+      }
+    }
   }
-  return true; 
+  return true;
 };
 
 // test case: step 2
