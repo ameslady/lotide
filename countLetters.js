@@ -31,7 +31,7 @@ const str2 = countLetters("lighthouse in the house"); // { l: 1, i: 2, g: 1, h: 
 assertEqual(str2["h"], 4); 
 assertEqual(str2[" "], 3); 
 
-const str3 = countLetters("Hi, my name is Amy!!!!");
+const str3 = countLetters("Hi, my name is Amy!!!!"); // { H: 1, i: 2, m: 3, y: 2, n: 1, a: 1, e: 1, s: 1, A: 1 }
 assertEqual(str3["!"], 1); 
 assertEqual(str3[","], 1); 
 assertEqual(str2[" "], 4); 
