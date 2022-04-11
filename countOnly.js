@@ -1,12 +1,4 @@
-// to be imported from other files eventually
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 // takes an array and object and returns an object containing counts of everything that the input object listed.
 // allItems: an array of strings that we need to look through
@@ -38,7 +30,6 @@ const firstNames = [
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
-console.log(result1);
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);

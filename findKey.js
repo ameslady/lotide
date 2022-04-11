@@ -1,12 +1,4 @@
-// to be imported from other files eventually
-const assertEqual = function(actual, expected) {
-
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
 // scan the object and return the first key for which the callback returns a truthy value.
 // if no key is found, then it should return undefined.
