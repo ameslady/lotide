@@ -43,7 +43,7 @@ The following functions are currently implemented:
 * `takeUntil(array, callback)`: returns a slice of the array with elements taken from the beginning. 
 * `without(source, itemsToRemove)`: removes any specified unwanted elements from an aray (should modify source array)
 
-## To-Do List
+## To-Do List (Not needed for project submission)
 
 **Refactor the following functions by creating test files and using mocha & chai:**
 
