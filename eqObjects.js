@@ -1,7 +1,6 @@
 const eqArrays = require('./eqArrays');
-const assertEqual = require('./assertEqual');
 
-// compares object data
+// compares object data and determines if they are equal
 const eqObjects = function(obj1, obj2) {
   let objKeys1 = Object.keys(obj1);
   let objKeys2 = Object.keys(obj2);
@@ -28,23 +27,22 @@ const eqObjects = function(obj1, obj2) {
 
 module.exports = eqObjects;
 
-/*
-// test cases
-const ab = { a: "1", b: "2" };
-const ba = { b: "2", a: "1" };
-assertEqual(eqObjects(ab, ba), true); // => true
 
-const fe = { c: "1", d: "3" };
-const gh = { c: "2", d: "4" };
-assertEqual(eqObjects(fe, gh), false); // => false
+// Test cases to be moved to their own file:
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// assertEqual(eqObjects(ab, ba), true); // => true
 
-const abc = { a: "1", b: "2", c: "3" };
-assertEqual(eqObjects(ab, abc), false); // => false
+// const fe = { c: "1", d: "3" };
+// const gh = { c: "2", d: "4" };
+// assertEqual(eqObjects(fe, gh), false); // => false
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-assertEqual(eqObjects(cd, dc), true); // => true
+// const abc = { a: "1", b: "2", c: "3" };
+// assertEqual(eqObjects(ab, abc), false); // => false
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-assertEqual(eqObjects(cd, cd2), false); // => false
-*/
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// assertEqual(eqObjects(cd, dc), true); // => true
+
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// assertEqual(eqObjects(cd, cd2), false); // => false
