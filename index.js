@@ -1,4 +1,4 @@
-// intended for other who want to use the lotide package
+// intended for others who want to use the lotide package
 const assertArraysEqual = require('./assertArraysEqual');
 const assertEqual = require('./assertEqual');
 const assertObjectsEqual = require('./assertObjectsEqual');

@@ -1,5 +1,5 @@
-// scans the object and returns the first key that contains the given value.
-// if no key with that given value is found, then it should return undefined.
+// scans the object and returns the first key that contains the given value
+// if no key with that given value is found, then it should return undefined
 const findKeyByValue = function(object, value) {
   let allKeys = Object.keys(object);
 

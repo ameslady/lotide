@@ -1,5 +1,5 @@
-// scans the object and return the first key for which the callback returns a truthy value
-// if no key is found, then it should return undefined.
+// scans the object and returns the first key for which the callback returns a truthy value
+// if no key is found, then it should return undefined
 const findKey = function(object, callback) {
   let keys = Object.keys(object);
   let result;
