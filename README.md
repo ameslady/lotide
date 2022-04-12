@@ -45,7 +45,7 @@ The following functions are currently implemented:
 
 ## To-Do List
 
-**Refactor the following functions to test files & mocha & chai:**
+**Refactor the following functions by creating test files and using mocha & chai:**
 
 * `assertArraysEqual` 
 * `assertEqual` 
